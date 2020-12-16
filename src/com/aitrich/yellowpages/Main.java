@@ -17,6 +17,7 @@ public class Main {
 		YellowPages addobj2=new YellowPages();
 ////		System.out.println("----------Employee----------");
 //		addobj2.addEmployee();
-		addobj2.findAcompany();
+//		addobj2.findAcompany();
+		addobj2.listAllemployeegiven();
 	}
 }

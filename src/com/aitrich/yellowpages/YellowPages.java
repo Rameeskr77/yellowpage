@@ -17,13 +17,8 @@ public class YellowPages {
 		cmpobj6.setNumber(1111111111);
 		cmpobj6.setCompanyEmail("dell@gmail.com");
 		cmpobj6.setCompanyWeb("dell.com");
-		Company[] arr=new Company[6];
-		arr[0]=cmpobj1;
-		arr[1]=cmpobj2;
-		arr[2]=cmpobj3;
-		arr[3]=cmpobj4;
-		arr[4]=cmpobj5;
-		arr[5]=cmpobj6;
+		Company arr[]= {cmpobj1,cmpobj2,cmpobj3,cmpobj4,cmpobj5,cmpobj6};
+	
 		return arr;
 //		System.out.println(cmpobj1);
 //		System.out.println(cmpobj2);
@@ -32,7 +27,7 @@ public class YellowPages {
 //		System.out.println(cmpobj5);
 //		System.out.println(cmpobj6);
 	}
-	public void addEmployee() {
+	public Employee[] addEmployee() {
 		Company[] a=addCompany();
 		Employee empobjt1= new Employee(1,"joyel","cloud engineer",City.chavakad,"male",1234567891,a[0]);
 		Employee empobjt2= new Employee(2,"jerry","cloud specialist",City.kodungaloor,"male",1234567231,a[1]);
@@ -47,12 +42,14 @@ public class YellowPages {
 		empobjt6.setEmployeeGenter("male");
 		empobjt6.setEmployeeNumber(1245124512);
 		empobjt6.setEmployeeCompany(a[5]);
-		System.out.println(empobjt1);
-		System.out.println(empobjt2);
-		System.out.println(empobjt3);
-		System.out.println(empobjt4);
-		System.out.println(empobjt5);
-		System.out.println(empobjt6);
+		Employee emparray[]= {empobjt1,empobjt2,empobjt3,empobjt4,empobjt5,empobjt6};
+//		System.out.println(empobjt1);
+//		System.out.println(empobjt2);
+//		System.out.println(empobjt3);
+//		System.out.println(empobjt4);
+//		System.out.println(empobjt5);
+//		System.out.println(empobjt6);
+		return emparray;
 	}
 	public void findAcompany() {
 		String name;
@@ -65,5 +62,17 @@ public class YellowPages {
 			
 		}
 		
+	}
+	public void listAllemployeegiven() {
+		String cmpname="amazon";
+		String name;
+		//Company[] cmp=addCompany();
+		Employee[] listcmp=addEmployee();
+		for(int i=0;i<listcmp.length;i++) {
+			//name=cmp[i].getCompanyname();
+			if(cmpname==listcmp[i].getEmployeeCompany().getCompanyname()) {
+				System.out.println(listcmp[i]);
+			}
+		}
 	}
 }
