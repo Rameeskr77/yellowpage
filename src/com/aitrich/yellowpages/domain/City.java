@@ -1,5 +1,4 @@
 package com.aitrich.yellowpages.domain;
-
-public enum City {
-
-}
+	public enum City {
+		trissur,triprayyar,chavakad,kollam,kottayam,kodungaloor;
+	}

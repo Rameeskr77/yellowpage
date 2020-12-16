@@ -1,9 +1,10 @@
 package com.aitrich.yellowpages.domain;
 
+
 public class Company {
 	int companyId;
 	String name;
-	String city;
+	City city;
 	int number;
 	String email;
 	String web;
@@ -16,7 +17,7 @@ public class Company {
 			this.email=null;
 			this.web=null;
 		}
-		public Company(int cmpid,String cmpname,String city,int num,String email,String web) {
+		public Company(int cmpid,String cmpname,City city,int num,String email,String web) {
 			this.companyId=cmpid;
 			this.name=cmpname;
 			this.city=city;
@@ -31,16 +32,16 @@ public class Company {
 		public void setCompanyid(int id) {
 			this.companyId=id;
 		}
-		public String getCompany() {
+		public String getCompanyname() {
 			return name;
 		}
 		public void setCompanyName(String cname) {
 			this.name=cname;
 		}
-		public String getCity() {
+		public City getCity() {
 			return city;
 		}
-		public void setcity(String ccity) {
+		public void setcity(City ccity) {
 			this.city=ccity;
 		}
 		public int getNumber() {

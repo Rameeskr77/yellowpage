@@ -1,10 +1,11 @@
 package com.aitrich.yellowpages.domain;
 
+
 public class Employee {
 	private int employeeId;
 	private String employeeName;
 	private	String employeeDesignation;
-	private String employeeCity;
+	private City city;
 	private String employeeGenter;
 	private int employeeNumber;
 	private Company company;
@@ -12,16 +13,16 @@ public class Employee {
 		this.employeeId=0;
 		this.employeeName=null;
 		this.employeeDesignation=null;
-		this.employeeCity=null;
+		this.city=null;
 		this.employeeGenter=null;
 		this.employeeNumber=0;
 //		this.company=null;
 	}
-	public Employee(int empId,String empName,String empDesig,String empCity,String empGenter,int empnum,Company company) {
+	public Employee(int empId,String empName,String empDesig,City empCity,String empGenter,int empnum,Company company) {
 		this.employeeId=empId;
 		this.employeeName=empName;
 		this.employeeDesignation= empDesig;
-		this.employeeCity=empCity;
+		this.city=empCity;
 		this.employeeGenter=empGenter;
 		this.employeeNumber=empnum;
 		 this.company=company;
@@ -44,11 +45,11 @@ public String getEmployeeDesignation() {
 public void setEmployeeDesignation(String designation) {
 	this.employeeDesignation=designation;
 }
-public String getEmployeeCity() {
-	return employeeCity;
+public City getEmployeeCity() {
+	return city;
 }
-public void setEmployeeCity(String city) {
-	this.employeeCity=city;
+public void setEmployeeCity(City city) {
+	this.city=city;
 }
 public String getEmployeeGenter() {
 	return employeeGenter;
@@ -68,12 +69,13 @@ public Company getEmployeeCompany() {
 public void setEmployeeCompany(Company company) {
 	this.company=company;
 }
-
 @Override
 public String toString() {
 	return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeDesignation="
-			+ employeeDesignation + ", employeeCity=" + employeeCity + ", employeeGenter=" + employeeGenter
-			+ ", employeeNumber=" + employeeNumber + ", company=" + company + "]";
+			+ employeeDesignation + ", city=" + city + ", employeeGenter=" + employeeGenter + ", employeeNumber="
+			+ employeeNumber + ", company=" + company + "]";
 }
+
+
 
 }

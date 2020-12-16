@@ -1,6 +1,6 @@
 package com.aitrich.yellowpages;
 
-import com.aitrich.yellowpages.domain.Company;
+
 
 public class Main {
 
@@ -16,6 +16,7 @@ public class Main {
 //		}
 		YellowPages addobj2=new YellowPages();
 ////		System.out.println("----------Employee----------");
-		addobj2.addEmployee();
+//		addobj2.addEmployee();
+		addobj2.findAcompany();
 	}
 }
